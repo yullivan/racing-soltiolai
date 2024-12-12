@@ -18,15 +18,21 @@ public class GameCount {
         return dice.get(0);
     }
 
-    public void runGame(List<Car> players){
+    public static void oneTurn(List<Car> players){
         for (Car player : players) {
-            for (int i = 0; i < this.count ; i++) {
-                if(rollDice()>2){
-                    player.move++;
-                }
+            if(rollDice()>2){
+                player.move++;
             }
         }
     }
+
+    public void runGame(List<Car> players){
+        for (int i = 0; i < this.count ; i++) {
+            oneTurn(players);
+        }
+    }
+
+
 
 
 }
