@@ -8,7 +8,6 @@ import java.util.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static racing.Car.*;
 import static racing.GameCount.*;
-import static racing.GameResult.*;
 
 class ApplicationTests {
 
