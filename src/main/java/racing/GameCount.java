@@ -13,26 +13,16 @@ public class GameCount {
     }
 
     public static int rollDice(){
-        List<Integer> dice = List.of(1,2,3,4,5,6);
+        List<Integer> dice = Arrays.asList(1,2,3,4,5,6);
         Collections.shuffle(dice);
         return dice.get(0);
     }
 
-    public static void oneTurn(List<Car> players){
-        for (Car player : players) {
-            if(rollDice()>2){
+    public static void oneTurn(Car player){
+            if(rollDice()>2) {
                 player.move++;
             }
-        }
     }
-
-    public void runGame(List<Car> players){
-        for (int i = 0; i < this.count ; i++) {
-            oneTurn(players);
-        }
-    }
-
-
 
 
 }
